@@ -1,11 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing Firebase</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <h1 id="headText">Hola Mundo</h1>
+
+    <form action="#" id="form">
+        <input type="text" id="inputCollection" placeholder="coleccion"/>
+      <input type="text" id="inputTitle" placeholder="titulo"/>
+      <input type="text" id="inputText" placeholder="texto"/>
+      <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+    </form>
+
+
+
+
+
+
+
+
+    <!--CONECTION WITH MATERIALIZE-->
+    <div>
+      <!-- Compiled and minified CSS -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      />
+
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </div>
+    <!--END CONECTION WITH MATERIALIZE-->
+
+    <!--CONECTION WITH FIREBASE-->
+    <div>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+
+      <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyD_aw9TEjN2nptwKR0QUvStlJLX6MU9Dro",
+          authDomain: "testing-firebase-3ff7d.firebaseapp.com",
+          databaseURL: "https://testing-firebase-3ff7d.firebaseio.com",
+          projectId: "testing-firebase-3ff7d",
+          storageBucket: "testing-firebase-3ff7d.appspot.com",
+          messagingSenderId: "79105449463",
+          appId: "1:79105449463:web:577c84ff26aaf3df1c62f2",
+          measurementId: "G-NR7FNX8K39",
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      </script>
+    </div>
+    <!--END CONECTION WITH FIREBASE-->
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
 </html>
