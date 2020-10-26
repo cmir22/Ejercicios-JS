@@ -11,10 +11,8 @@ form.addEventListener('submit', e => {
     let docTitle = document.querySelector('#docTitle').value;
     let docText = document.querySelector('#docText').value;
     
-    
-    db.collection(`${docName}`).doc(`${docName}`).set({
-        docName,
-        docTitle,
-        docText
+    var datos = [docName,docTitle,docText]
+    db.collection(`${docTitle}`).doc(`${docName}`).set({
+         datos
     })
 })
