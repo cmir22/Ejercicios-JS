@@ -1,16 +1,20 @@
 'use strict'
 
-const db  = firebase.firestore();
+const db =  firebase.firestore();
 
-var form = document.querySelector("#form")
+const form = document.querySelector('#form');
 
-form.addEventListener('submit', e =>{
-    var inputCollection = document.querySelector("#inputCollection").value;
-    var inputTitle = document.querySelector("#inputTitle").value;
-    var inputText = document.querySelector("#inputText").value;
+form.addEventListener('submit', e => {
+    e.preventDefault();
 
-    db.collection(`${inputCollection}`).doc("uno").set({
-        inputTitle,
-        inputText
+    let docName = document.querySelector('#docName').value;
+    let docTitle = document.querySelector('#docTitle').value;
+    let docText = document.querySelector('#docText').value;
+    
+    
+    db.collection(`${docName}`).doc(`${docName}`).set({
+        docName,
+        docTitle,
+        docText
     })
 })

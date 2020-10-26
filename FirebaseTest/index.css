@@ -2,3 +2,15 @@
     color: black;
     text-align: center;
 }
+
+#form{
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+#bntSave{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+ 
+}
