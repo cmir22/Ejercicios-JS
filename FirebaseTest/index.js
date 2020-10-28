@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     const querySnapshot = await getData();
     querySnapshot.forEach(doc => {
         console.log(doc.data())
-        formTareas.innerHTML += `<h4>${doc.data().texto}</h4>`
+        formTareas.innerHTML += `<h1>${doc.data().texto}</h1>`
     })
 });
 
@@ -37,3 +37,4 @@ form.addEventListener("submit", async (e) => {
 
   console.log(e);
 });
+
