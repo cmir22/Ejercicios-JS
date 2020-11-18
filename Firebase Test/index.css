@@ -1,0 +1,19 @@
+*{
+    background-color: whitesmoke;
+}
+
+#title{
+    text-align: center;
+    color: gray;
+    font-family: sans-serif;
+}
+
+#form{
+    margin-top: 5rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+#base{
+    color: red;
+}

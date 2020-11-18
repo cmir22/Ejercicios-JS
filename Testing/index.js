@@ -1,13 +1,9 @@
 "use strict";
 
-const btn = document.querySelector("#btn");
-var inputArea = document.querySelector("#inputArea");
+var nombre = "como estas amigo mio";
 
-btn.addEventListener("click", (func) => {
-  var name = "Cruz";
-  inputArea = inputArea.value;
-  var firebaseRef = firebase.database().ref();
+var palabra = nombre.split(" ");
 
-  firebaseRef.child(name).push(inputArea);
-  console.log(inputArea);
-});
+for(var i = 0; palabra.length >= i; i++) {
+  console.log(palabra[i]);
+}
