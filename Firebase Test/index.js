@@ -1,29 +1,33 @@
-"use strict";
+'use strict'
 
-//Firebase conection
+// Contection with  Firebase
 const db = firebase.firestore();
-//Variables
-const form = document.querySelector("#form");
-const displayDb = document.querySelector("#database");
+// Get the form
+const form = document.querySelector('#form');
+const divDatabase = document.querySelector('#database');
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  var name = document.querySelector("#inputName").value;
-  var country = document.querySelector("#inputCountry").value;
-  await saveData(name, country);
-});
+const setData = (namePokemon,typePokemon,colorPokemon) => {
+db.collection('Pokemons').doc(`${namePokemon}`).set({
+  Name: namePokemon,
+  Type: typePokemon,
+  Color: colorPokemon
+})
+}
 
-const saveData = (name, country) => {
-  db.collection("nombres").doc(`${country}`).set({
-    nombre: name,
-  });
-};
+form.addEventListener('submit', async(e) =>{
+e.preventDefault();
+let namePokemon = document.querySelector('#name').value;
+let typePokemon = document.querySelector('#type').value;
+let colorPokemon = document.querySelector('#color').value;
+await setData(namePokemon,typePokemon,colorPokemon)
+form.reset();
+})
 
-const getData = () => db.collection("nombres").get();
+const getData = () => db.collection('Pokemons').get();
 
-window.addEventListener("DOMContentLoaded", async (e) => {
+window.addEventListener('DOMContentLoaded', async (e)=>{
   const querySnapshot = await getData();
-  querySnapshot.forEach(doc => {
-    displayDb.innerHTML += `<p id="base">${doc.data().nombre}</p>`;
-  });
-});
+  querySnapshot.forEach(index =>{
+    divDatabase.innerHTML += `<h1>${index.data().Name}</h1>`
+  })
+})
