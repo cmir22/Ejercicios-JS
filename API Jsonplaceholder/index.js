@@ -1,21 +1,26 @@
-'use strict'
+"use strict";
 
-var divData = document.querySelector('#data');
+const divData = document.querySelector("#data");
 
-getFetch().then(data => data.json())
-.then(user =>{
+getFetch()
+  .then((data) => data.json())
+  .then((user) => {
     displayData(user);
-})
+  });
 
-
-function getFetch(){
-    return fetch('https://jsonplaceholder.typicode.com/users');
+function getFetch() {
+  return fetch("https://jsonplaceholder.typicode.com/users");
 }
 
-function displayData(user){
-user.map(index =>{
-    let li = document.createElement('div');
-    li.innerHTML = `<h1 id="inner">${index.email}</h1>`;
-    divData.append(li)
-})
+function displayData(user) {
+  user.map((index) => {
+    let div = document.createElement("div");
+    div.className = "nombres";
+    div.innerHTML = `
+    <h3 id="titulo">${index.name}</h3>
+    <h4>Email: ${index.email}</h4>
+    <h4>Phone: ${index.phone}</h4>
+    `;
+    divData.append(div);
+  });
 }

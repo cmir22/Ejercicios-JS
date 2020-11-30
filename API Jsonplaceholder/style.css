@@ -1,5 +1,19 @@
-#inner{
-    font-size: 20px;
-    text-align: center;
-    margin-top: 2rem;
+* {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.nombres {
+    margin-top: 1rem;
+    color: black;
+  background-color: #F2F2F2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 2s;
+  padding: 5px;
+}
+#titulo {
+    padding: 0px;
+  text-align: center;
+}
+#titlePhones {
+  text-align: center;
 }
