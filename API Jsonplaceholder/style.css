@@ -3,15 +3,18 @@
 }
 
 .nombres {
-    margin-top: 1rem;
-    color: black;
-  background-color: #F2F2F2;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  max-width: 500px;
+  margin-top: 1rem;
+  background-color: #f2f2f2;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 2s;
-  padding: 5px;
+  transition: 1s;
+  padding: 5px 10px;
 }
 #titulo {
-    padding: 0px;
+  padding: 0px;
   text-align: center;
 }
 #titlePhones {
