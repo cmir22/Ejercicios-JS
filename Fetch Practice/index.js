@@ -1,4 +1,4 @@
-"use stric";
+"use strict";
 
 const getNombre = (idPost) => {
   fetch(`https://jsonplaceholder.typicode.com/posts/${idPost}`)
