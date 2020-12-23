@@ -1,0 +1,40 @@
+/* Ttitle Text*/
+#titleText {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Card Title*/
+#cardTitle {
+  max-width: 30rem;
+  background-color: #fad961;
+  background-image: linear-gradient(90deg, #fad961 0%, #f76b1c 100%);
+}
+
+/* Div Cards */
+#divCards {
+}
+
+/* Card Search Pokemon */
+#cardSearch {
+  margin-top: 2rem;
+  max-width: 40rem;
+}
+
+#inputText {
+  width: 80%;
+  display: flex;
+}
+
+#buttonSearch {
+  width: 100%;
+  color: white;
+  background-color: orange;
+}
+
+#cardTitle,
+#cardSearch,
+#inputText {
+  margin-left: auto;
+  margin-right: auto;
+}
