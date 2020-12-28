@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Pokemon API</title>
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <!-- Materialicze CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</head>
-<body>
-    <div class="card" id="cardTitle">
-       <h1 id="titleText">Pokemon API</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Materialize-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!--CSS-->
+    <link rel="stylesheet" href="./style.css" />
+    <title>Poke API</title>
+  </head>
+  <body>
+    <div class="card" id="title">
+      <h1>PokeAPI</h1>
+    </div>
+<form action="#" id="form">
+    <input type="text" id="inputSearch" placeholder="Search">
+</form>
+    <div class="card" id="pokemonDisplay">
+      <h3 id="pokemonName">Pokemon</h3>
+      <img id="pokemonImg" src=""/>
     </div>
 
-    <div class="card" id="cardSearch">
-        <form action="#" id="form">
-            <input type="text" id="inputText" placeholder="Pokemon">
-            <button class="btn waves-effect btn-flat" id="buttonSearch">Search Pokemon</button>
-        </form>
-    </div>
-
-    <div id="divCards"></div>
-    
     <script type="text/javascript" src="./index.js"></script>
-</body>
+  </body>
 </html>
