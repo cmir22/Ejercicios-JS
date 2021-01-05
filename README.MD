@@ -44,7 +44,6 @@
 > - Function default values
 > - Arrow Functions
 > - Set Time Out
-> - Events
 > - Promises
 > - Var, Let, Const 
 > - Alerts
@@ -59,7 +58,6 @@
 > - Functions inside variables
 > - Returns
 > - Parameters
-> - Arrays
 > - Json()
 > - Objects
 > - Classes
