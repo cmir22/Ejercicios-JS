@@ -1,27 +1,29 @@
 "use strict";
 
-const getPost = async (id) => {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+const getUsers = async (id) => {
+  const response = await fetch(`https://reqres.in/api/users?page=2`);
   const responseJson = await response.json();
-  const divPost = document.querySelector(".divPost");
-  responseJson.map((element) => {
-    var divCard = document.createElement("div");
-    divCard.classList = "card";
-    divCard.innerHTML = `
-    <div>
-    <h3 id='cardTitle'> Title: ${element.title}</h3>
-    </div>
-    `;
-    divPost.append(divCard);
-  });
+  const users = responseJson.data;
+  displayUsers(users);
 };
 
-const arrow = () =>  ({nombre: "Cruz"})
+function displayUsers(users) {
+  var usuarios = document.querySelector(".usuarios");
+  users.map((element) => {
+    var divUser = document.createElement("div");
+    var image = document.createElement("img");
+    divUser.classList = "divUser";
+    divUser.innerHTML = `
+      <h2>Number: ${element.id}</h2>
+      <img src="${element.avatar}" />
 
+      `;
+    usuarios.append(divUser);
+  });
+}
 
 function init() {
-  getPost();
-  console.log(arrow().nombre)
+  getUsers();
 }
 
 init();
